@@ -361,8 +361,9 @@ strong {
     }
   }
   .curve-sponsors-bottom {
+    position: relative;
     height: 130px;
-    margin-top: -30px;
+    z-index: 1;
     &:before {
       content: '';
       position: absolute;
@@ -372,13 +373,21 @@ strong {
       background: #fff;
       top: 0;
       left: 0;
-      transform-origin: top left;
-      transform: skewY(5deg);
+      transform-origin: top right;
+      transform: skewY(-5deg);
     }
   }
 }
 
-
+.gallery-area {
+  position: relative;
+  z-index: 98;
+  background: $primary;
+  padding-top: 120px;
+  .section-title {
+    border-color: $white;
+  }
+}
 
 /* ------------ For Responsiveness -------------- */
 @media (max-width: 1400px) {
