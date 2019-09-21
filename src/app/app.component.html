@@ -4,9 +4,9 @@
       <img src="assets/images/logo.svg" alt="Angular">
     </a>
     <ul class="nav-items">
-      <li class="nav-item"><a href="">Speakers</a></li>
-      <li class="nav-item"><a href="">Session</a></li>
-      <li class="nav-item"><a href="">Team</a></li>
+      <li class="nav-item"><a href="#" (click)="toSpecificArea($event, 'speakers')">Speakers</a></li>
+      <li class="nav-item"><a href="#" (click)="toSpecificArea($event, 'sessions')">Sessions</a></li>
+      <li class="nav-item"><a href="#" (click)="toSpecificArea($event, 'map-area')">Map</a></li>
     </ul>
   </div>
 </div>
@@ -27,7 +27,7 @@
     </div>
   </div>
   <div class="banner-curve-area"></div>
-  <div class="speakers-area">
+  <div id="speakers" class="speakers-area">
     <div class="container">
       <h2 class="section-title"><span class="large font-primary font-shadow">S</span>peakers</h2>
       <div class="row">
@@ -85,7 +85,7 @@
     </div>
     <div class="curve-speaker-bottom "></div>
   </div>
-  <div class="sessions-area">
+  <div id="sessions" class="sessions-area">
     <div class="container">
       <h2 class="section-title"><span class="large font-white font-shadow">S</span>essions</h2>
       <div class="row">
@@ -182,7 +182,7 @@
       <ngx-masonry-gallery [width]="200" [images]="images"></ngx-masonry-gallery>
     </div>
   </div>
-  <div class="map-area">
+  <div id="map-area" class="map-area">
     <div id="map" class="map"></div>
   </div>
 </div>

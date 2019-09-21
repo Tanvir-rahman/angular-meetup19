@@ -175,6 +175,9 @@ strong {
     background: #fff;
     position: relative;
     z-index: 1;
+    .container {
+      padding-bottom: 10px;
+    }
 
     .speaker {
       .speaker-info {
@@ -240,7 +243,7 @@ strong {
     background: $primary;
 
     .container {
-      padding-bottom: 80px;
+      padding: 20px 0 80px;
     }
 
     .section-title {
@@ -347,6 +350,7 @@ strong {
       justify-content: space-around;
       flex-wrap: wrap;
       margin: 10px 0;
+      padding-bottom: 30px;
       .sponsor {
         width: 220px;
         height: 92px;
@@ -373,7 +377,7 @@ strong {
         width: 100%;
         height: 100%;
         z-index: 2;
-        background: #fff;
+        background: $primary;
         top: 0;
         left: 0;
         transform-origin: top right;
@@ -384,9 +388,9 @@ strong {
 
   .gallery-area {
     position: relative;
-    z-index: 98;
+    z-index: 102;
     background: $primary;
-    padding: 120px 0 100px;
+    padding: 20px 0 100px;
     .section-title {
       border-color: $white;
     }

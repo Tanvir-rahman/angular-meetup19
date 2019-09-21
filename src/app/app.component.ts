@@ -62,14 +62,14 @@ export class AppComponent implements OnInit {
         })]
       }),
       style: new ol.style.Style({
-        image: new ol.style.Icon({
-          anchor: [0.5, 0.5],
-          anchorXUnits: "fraction",
-          anchorYUnits: "fraction",
-          src: "https://img.icons8.com/plasticine/100/000000/marker.png"
-          })
+      image: new ol.style.Icon({
+        anchor: [0.5, 0.5],
+        anchorXUnits: "fraction",
+        anchorYUnits: "fraction",
+        src: "https://img.icons8.com/plasticine/100/000000/marker.png"
         })
-      });
+      })
+    });
     this.map.addLayer(this.vectorLayer);
   }
 
@@ -77,6 +77,11 @@ export class AppComponent implements OnInit {
     return this.urls.map(m => <IMasonryGalleryImage>{
         imageUrl: m
   })};
+
+  toSpecificArea($event, name) {
+    $event.preventDefault();
+    document.getElementById(name).scrollIntoView({behavior: 'smooth'});
+  }
 
   // @HostListener('window:scroll', ['$event'])
   // onWindowScroll(e) {
