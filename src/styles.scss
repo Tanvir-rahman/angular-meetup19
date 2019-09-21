@@ -239,6 +239,10 @@ strong {
     z-index: 98;
     background: $primary;
 
+    .container {
+      padding-bottom: 80px;
+    }
+
     .section-title {
       border-color: $white;
     }
@@ -382,8 +386,7 @@ strong {
     position: relative;
     z-index: 98;
     background: $primary;
-    padding-top: 120px;
-    padding: 120px 0 50px;
+    padding: 120px 0 100px;
     .section-title {
       border-color: $white;
     }
@@ -409,6 +412,7 @@ strong {
     justify-content: space-between;
     height: 100%;
     align-items: center;
+    padding: 0 40px;
     .footer-logo {
       color: $black;
       img {
@@ -421,16 +425,22 @@ strong {
     }
     .nav-items {
       display: flex;
+      margin-bottom: 0;
       .nav-item {
+        display: flex;
+        align-items: center;
         margin-right: 20px;
         a {
-          display: block;
+          display: flex;
           text-transform: uppercase;
           font-size: .8rem;
           font-weight: 700;
           letter-spacing: 1px;
           transition: color .2s ease;
           color: $primary;
+          span {
+            margin-left: 5px;
+          }
         }
         &:last-child {
           margin-right: 0;
@@ -449,45 +459,62 @@ strong {
 }
 
 @media (max-width: 620px) {
-  .sessions-area .fl-table td:last-child {
-    border-left: 0;
+  .body-area {
+    .speakers-area .curve-speaker-bottom {
+      height: 60px;
+    }
+    .sessions-area .fl-table td:last-child {
+      border-left: 0;
+    }
+    .sessions-area .fl-table tr td {
+      border-color: $primary;
+    }
+    .sessions-area .fl-table thead tr {
+      flex-direction: column;
+      height: 100vh;
+      border-right: 1px solid $primary;
+    }
+    .sessions-area .fl-table thead tr th {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .sessions-area .fl-table thead tr th:last-child {
+      width: 100%;
+      border-bottom: 0;
+    }
+    .sessions-area .fl-table tbody {
+      display: flex;
+      flex-direction: row;
+    }
+    .sessions-area .fl-table tbody tr {
+      flex-direction: column;
+      border-right: 1px solid $primary;
+    }
+    .sessions-area .fl-table tbody tr:last-child {
+      border-right: 0;
+    }
+    .sessions-area .fl-table tbody tr td {
+      width: 200px;
+    }
+    .sessions-area .fl-table tbody tr td:first-child {
+      height: 50px;
+      border-bottom: 1px solid $primary;
+    }
+    .sessions-area .fl-table tbody tr td:last-child {
+      width: 200px;
+      height: 100vh;
+    }
   }
-  .sessions-area .fl-table tr td {
-    border-color: $primary;
+  .footer-area .container {
+    padding: 10px;
   }
-  .sessions-area .fl-table thead tr {
-    flex-direction: column;
-    height: 100vh;
-    border-right: 1px solid $primary;
-  }
-  .sessions-area .fl-table thead tr th {
-    width: 100%;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .sessions-area .fl-table thead tr th:last-child {
-    width: 100%;
-    border-bottom: 0;
-  }
-  .sessions-area .fl-table tbody {
-    display: flex;
-    flex-direction: row;
-  }
-  .sessions-area .fl-table tbody tr {
-    flex-direction: column;
-  }
-  .sessions-area .fl-table tbody tr td {
-    width: 200px;
-  }
-  .sessions-area .fl-table tbody tr td:first-child {
-    height: 50px;
-    border-bottom: 1px solid $primary;
-  }
-  .sessions-area .fl-table tbody tr td:last-child {
-    width: 200px;
-    height: 100vh;
+}
+@media (max-width: 576px) {
+  .footer-area .container .nav-items .nav-item a {
+    font-size: 1.5rem;
   }
 }
 
