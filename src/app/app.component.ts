@@ -2,6 +2,7 @@ import { Component, OnInit, Inject, HostListener } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 import { faTwitter, faGithub, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { IMasonryGalleryImage } from 'ngx-masonry-gallery';
 
 declare var ol: any;
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit {
   faGithub = faGithub;
   faLinkedin = faLinkedin;
   faFacebook = faFacebook;
+  faBars = faBars;
   latitude: number = 23.7817;
   longitude: number = 90.4005;
   map: any;
@@ -82,6 +84,16 @@ export class AppComponent implements OnInit {
   toSpecificArea($event, name) {
     $event.preventDefault();
     document.getElementById(name).scrollIntoView({behavior: 'smooth'});
+  }
+
+  toggleMenu() {
+    let x = document.getElementById("navbar");
+    if (x.className === "header-navbar") {
+      x.className += " responsive";
+    }
+    else {
+      x.className = "header-navbar";
+    }
   }
 
   @HostListener('window:scroll', ['$event'])

@@ -36,13 +36,13 @@ strong {
   overflow: hidden;
 }
 
-.sticky {
-  background: $primary !important;
-  border-bottom: 2px solid $white;
-  a {
-    color: $white !important;
-  }
-}
+// .sticky {
+//   background: $primary !important;
+//   border-bottom: 2px solid $white;
+//   a {
+//     color: $white !important;
+//   }
+// }
 
 .section-title {
   font-size: 2rem;
@@ -85,17 +85,27 @@ body {
   left: 0;
   width: 100%;
   z-index: 999;
-  background: transparent;
+  background: white;
+  border-bottom: 1px solid $secondary;
   .container {
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
-    .header-logo img {
-      height: 40px;
-      width: 40px;
-      margin-right: 10px;
-      position: relative;
-      z-index: 1001;
+    .logo-area {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .menu {
+        color: $secondary;
+        display: none;
+      }
+      .header-logo img {
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+        position: relative;
+        z-index: 1001;
+      }
     }
     .nav-items {
       display: flex;
@@ -552,6 +562,27 @@ body {
 
 /* ------------ For Responsiveness -------------- */
 @media (max-width: 620px) {
+  .header-navbar .container .nav-items {
+    display: none;
+  }
+  .header-navbar .container .logo-area .menu {
+    display: block;
+  }
+  .responsive {
+    background: $white;
+    border-bottom: 1px solid $secondary;
+    .container {
+      flex-direction: column;
+    }
+    .container .nav-items {
+      display: flex;
+      flex-direction: column;
+    }
+    .container .nav-items .nav-item {
+      text-align: center;
+    }
+  }
+
   .section-title {
     width: 100%;
     text-align: center;
@@ -573,6 +604,9 @@ body {
       width: 75%;
       height: 260px;
       margin-top: 0px;
+    }
+    .speakers-area .speaker p {
+      text-align: center;
     }
     .speakers-area .speaker .speaker-info img.second {
       width: 75%;

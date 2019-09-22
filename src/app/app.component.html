@@ -1,14 +1,19 @@
 <div id="navbar" class="header-navbar">
   <div class="container">
-    <a class="header-logo" href="#">
-      <img src="assets/images/logo.svg" alt="Angular">
-    </a>
+    <div class="logo-area">
+      <a class="header-logo" href="#">
+        <img src="assets/images/logo.svg" alt="Angular">
+      </a>
+      <a href="javascript:void(0);" class="menu" (click)="toggleMenu()"><fa-icon [icon]="faBars"></fa-icon></a>
+    </div>
+
     <ul class="nav-items">
       <li class="nav-item"><a href="#" (click)="toSpecificArea($event, 'speakers')">Speakers</a></li>
       <li class="nav-item"><a href="#" (click)="toSpecificArea($event, 'sessions')">Sessions</a></li>
       <li class="nav-item"><a href="#" (click)="toSpecificArea($event, 'sponsors')">Sponsors</a></li>
       <li class="nav-item"><a href="#" (click)="toSpecificArea($event, 'map-area')">Map</a></li>
       <li class="nav-item"><a href="#" (click)="toSpecificArea($event, 'organizers')">Organizers</a></li>
+      <li class="nav-item"></li>
     </ul>
   </div>
 </div>
