@@ -6,7 +6,9 @@
     <ul class="nav-items">
       <li class="nav-item"><a href="#" (click)="toSpecificArea($event, 'speakers')">Speakers</a></li>
       <li class="nav-item"><a href="#" (click)="toSpecificArea($event, 'sessions')">Sessions</a></li>
+      <li class="nav-item"><a href="#" (click)="toSpecificArea($event, 'sponsors')">Sponsors</a></li>
       <li class="nav-item"><a href="#" (click)="toSpecificArea($event, 'map-area')">Map</a></li>
+      <li class="nav-item"><a href="#" (click)="toSpecificArea($event, 'organizers')">Organizers</a></li>
     </ul>
   </div>
 </div>
@@ -16,27 +18,35 @@
   [ngStyle]="{'background-image': 'url(/assets/images/cover_photo.jpg)'}"></div>
   <div class="banner-section">
     <div class="container">
-      <h1 class="title">
-        <span class="font-primary font-shadow">Angular Meetup &nbsp; </span> 2019
-      </h1>
-      <p class="description">
-          <strong class="font-primary">#angularbd19 &nbsp; </strong> is the meetup for the Angular community in Bangladesh.
-      </p>
-      <h2 class="time col-12">
-          Dhaka • 5th October, 2019
-      </h2>
+      <div class="row">
+        <div class="left-area col-12">
+          <h1 class="title">
+            <span class="font-primary">Angular Meetup</span> 2019
+          </h1>
+          <p class="description">
+            <strong class="font-primary">Angular</strong> community meetup in Bangladesh
+          </p>
+          <p class="time">
+              Dhaka • 5th October, 2019
+          </p>
+        </div>
+        <div class="right-area col-12 col-sm-6 d-none">
+          sdfdsf
+        </div>
+      </div>
     </div>
   </div>
+
   <div class="banner-curve-area"></div>
   <div id="speakers" class="speakers-area">
     <div class="container">
-      <h2 class="section-title"><span class="large font-primary font-shadow">S</span>peakers</h2>
+      <h2 class="section-title"><span class="large font-white">S</span>peakers</h2>
       <div class="row">
         <div class="col-12 col-sm-6">
           <div class="speaker">
             <div class="speaker-info box-shadow-secondary">
-              <img src="assets/images/Tanvir.jpg" alt="Speaker">
-              <h3 class="font-shadow">Tanvir Rahman</h3>
+              <img class="first" src="assets/images/Tanvir.jpg" alt="Speaker">
+              <h3>Tanvir Rahman</h3>
               <a class="twitter font-primary" href="https://twitter.com/Tanvir2555" target="_blank"> <fa-icon [icon]="faTwitter"></fa-icon> Twitter</a>
               <a class="github font-primary" href="https://github.com/Tanvir-rahman" target="_blank"><fa-icon [icon]="faGithub"></fa-icon> GitHub</a>
               <a class="linkedin font-primary" href="https://www.linkedin.com/in/tanvir-rahman/" target="_blank"><fa-icon [icon]="faLinkedin"></fa-icon> Linkedin</a>
@@ -47,13 +57,13 @@
         <div class="col-12 col-sm-6">
           <div class="speaker">
             <div class="speaker-info box-shadow-secondary">
-              <img src="assets/images/Tanvir.jpg" alt="Speaker">
-              <h3 class="font-shadow">Tanvir Rahman</h3>
+              <img class="second" src="assets/images/Tanvir.jpg" alt="Speaker">
+              <h3>Tanvir Rahman</h3>
               <a class="twitter font-primary" href="https://twitter.com/Tanvir2555" target="_blank"> <fa-icon [icon]="faTwitter"></fa-icon> Twitter</a>
               <a class="github font-primary" href="https://github.com/Tanvir-rahman" target="_blank"><fa-icon [icon]="faGithub"></fa-icon> GitHub</a>
               <a class="linkedin font-primary" href="https://www.linkedin.com/in/tanvir-rahman/" target="_blank"><fa-icon [icon]="faLinkedin"></fa-icon> Linkedin</a>
             </div>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>Tanvir Rahman is a Javascript Enthusiatic who loves logical programming and Data Structures.</p>
           </div>
         </div>
       </div>
@@ -61,8 +71,8 @@
         <div class="col-12 col-sm-6">
           <div class="speaker">
             <div class="speaker-info box-shadow-secondary">
-              <img src="assets/images/Tanvir.jpg" alt="Speaker">
-              <h3 class="font-shadow">Tanvir Rahman</h3>
+              <img class="third" src="assets/images/Tanvir.jpg" alt="Speaker">
+              <h3>Tanvir Rahman</h3>
               <a class="twitter font-primary" href="https://twitter.com/Tanvir2555" target="_blank"> <fa-icon [icon]="faTwitter"></fa-icon> Twitter</a>
               <a class="github font-primary" href="https://github.com/Tanvir-rahman" target="_blank"><fa-icon [icon]="faGithub"></fa-icon> GitHub</a>
               <a class="linkedin font-primary" href="https://www.linkedin.com/in/tanvir-rahman/" target="_blank"><fa-icon [icon]="faLinkedin"></fa-icon> Linkedin</a>
@@ -73,8 +83,8 @@
         <div class="col-12 col-sm-6">
           <div class="speaker">
             <div class="speaker-info box-shadow-secondary">
-              <img src="assets/images/Tanvir.jpg" alt="Speaker">
-              <h3 class="font-shadow">Tanvir Rahman</h3>
+              <img class="fourth" src="assets/images/Tanvir.jpg" alt="Speaker">
+              <h3>Tanvir Rahman</h3>
               <a class="twitter font-primary" href="https://twitter.com/Tanvir2555" target="_blank"> <fa-icon [icon]="faTwitter"></fa-icon> Twitter</a>
               <a class="github font-primary" href="https://github.com/Tanvir-rahman" target="_blank"><fa-icon [icon]="faGithub"></fa-icon> GitHub</a>
               <a class="linkedin font-primary" href="https://www.linkedin.com/in/tanvir-rahman/" target="_blank"><fa-icon [icon]="faLinkedin"></fa-icon> Linkedin</a>
@@ -84,11 +94,10 @@
         </div>
       </div>
     </div>
-    <div class="curve-speaker-bottom "></div>
   </div>
   <div id="sessions" class="sessions-area">
     <div class="container">
-      <h2 class="section-title"><span class="large font-white font-shadow">S</span>essions</h2>
+      <h2 class="section-title"><span class="large font-primary">S</span>essions</h2>
       <div class="row">
         <div class="col-12">
           <div class="table-wrapper">
@@ -104,10 +113,10 @@
                   <td><p class="time font-primary">8:00 - 8:30</p></td>
                   <td>
                     <div class="content col-12">
-                      <div class="topic font-shadow">
+                      <div class="topic">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                       </div>
-                      <a href="#" class="speaker font-shadow"> Tanvir Rahman</a>
+                      <a href="#" class="speaker"> Tanvir Rahman</a>
                       <div class="description">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                       </div>
@@ -118,10 +127,10 @@
                   <td><p class="time font-primary">8:30 - 9:00</p></td>
                   <td>
                     <div class="content col-12">
-                      <div class="topic font-shadow">
+                      <div class="topic">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                       </div>
-                      <a href="#" class="speaker font-shadow"> Tanvir Rahman</a>
+                      <a href="#" class="speaker"> Tanvir Rahman</a>
                       <div class="description">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                       </div>
@@ -132,10 +141,10 @@
                   <td><p class="time font-primary">9:00 - 9:30</p></td>
                   <td>
                     <div class="content col-12">
-                      <div class="topic font-shadow">
+                      <div class="topic">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                       </div>
-                      <a href="#" class="speaker font-shadow"> Tanvir Rahman</a>
+                      <a href="#" class="speaker"> Tanvir Rahman</a>
                       <div class="description">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                       </div>
@@ -148,11 +157,10 @@
         </div>
       </div>
     </div>
-    <div class="curve-sessions-bottom"></div>
   </div>
-  <div class="sponsors-area">
+  <div id="sponsors" class="sponsors-area">
     <div class="container">
-      <h2 class="section-title"><span class="large font-primary font-shadow">S</span>ponsors</h2>
+      <h2 class="section-title"><span class="large font-primary">S</span>ponsors</h2>
         <div class="sponsors">
           <div class="sponsor box-shadow-primary">
             <a href="#"><img src="assets/images/pathao.png" alt="sponsor"></a>
@@ -170,28 +178,51 @@
           <div class="sponsor box-shadow-primary">
             <a href="#"><img src="assets/images/pathao.png" alt="sponsor"></a>
           </div>
-          <div class="sponsor box-shadow-secondary">
-            <a href="#"><img src="assets/images/sponsor.png" alt="sponsor"></a>
-          </div>
         </div>
     </div>
-    <div class="curve-sponsors-bottom"></div>
   </div>
   <div class="gallery-area">
     <div class="container">
-      <h2 class="section-title"><span class="large font-white font-shadow">L</span>ook &nbsp;<span class="font-white font-shadow">B</span>ack <span class="font-white font-shadow">A</span>t <span class="large font-white font-shadow">17</span></h2>
+      <h2 class="section-title"><span class="large font-white">L</span>ook &nbsp;<span class="font-white">B</span>ack <span class="font-white">A</span>t <span class="large font-white">17</span></h2>
       <ngx-masonry-gallery [width]="200" [images]="images"></ngx-masonry-gallery>
     </div>
   </div>
   <div id="map-area" class="map-area">
     <div id="map" class="map"></div>
   </div>
+  <div id="organizers" class="organizers-area">
+    <div class="container">
+      <h2 class="section-title"><span class="large">O</span>rganizers <span class="large font-primary">&</span> <span class="large">C</span>ontributors</h2>
+      <div class="organizers">
+        <div class="organizer box-shadow-primary">
+          <div class="img-area"><img src="assets/images/Tanvir.jpg" alt="organizer"></div>
+          <a href="#" class="title font-primary">Lorem Ipsum</a>
+          <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vel est ad</div>
+        </div>
+        <div class="organizer box-shadow-primary">
+          <div class="img-area"><img src="assets/images/Tanvir.jpg" alt="organizer"></div>
+          <a href="#" class="title font-primary">Lorem Ipsum</a>
+          <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vel est ad</div>
+        </div>
+        <div class="organizer box-shadow-primary">
+          <div class="img-area"><img src="assets/images/Tanvir.jpg" alt="organizer"></div>
+          <a href="#" class="title font-primary">Lorem Ipsum</a>
+          <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vel est ad</div>
+        </div>
+        <div class="organizer box-shadow-primary">
+          <div class="img-area"><img src="assets/images/Tanvir.jpg" alt="organizer"></div>
+          <a href="#" class="title font-primary">Lorem Ipsum</a>
+          <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vel est ad</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 <div class="footer-area">
     <div class="container">
-      <a class="footer-logo font-shadow" href="#">
+      <a class="footer-logo" href="#">
         <img src="assets/images/logo.svg" alt="Angular">
         Angular Meetup 2019
       </a>

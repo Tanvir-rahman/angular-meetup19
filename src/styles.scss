@@ -6,18 +6,22 @@
 @import '~bootstrap/scss/bootstrap-grid';
 
 $primary: #e82110;
-$secondary: #232323;
+$secondary: #323944;
 $white: #fff;
+$regular-font: 'Barlow', sans-serif;
+$primary-font: 'Merriweather', serif;
 
-.font-shadow {
-  text-shadow: 0.05em 0.05em #232323;
-}
+// .font-shadow {
+//   text-shadow: 0.05em 0.05em #232323;
+// }
 
 .font-primary {
+  font-family: $primary-font;
   color: $primary;
 }
 
 .font-white {
+  font-family: $primary-font;
   color: $white;
 }
 
@@ -27,14 +31,17 @@ strong {
 
 .container {
   width: 100%;
-  padding: 0 80px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .sticky {
-  background: #fff;
+  background: $primary !important;
+  border-bottom: 2px solid $white;
+  a {
+    color: $white !important;
+  }
 }
 
 .section-title {
@@ -43,40 +50,46 @@ strong {
   border-bottom: 1px solid $primary;
   padding-bottom: 5px;
   margin-bottom: 15px;
+  width: 60%;
+  text-align: left;
 }
 
 .large {
   font-size: 4rem;
 }
 
-.box-shadow-primary {
-  position: relative;
-  border: 2px solid $primary;
-  padding: 0 10px;
-  box-shadow: 4px 4px $primary;
-}
+// .box-shadow-primary {
+//   position: relative;
+//   border: 2px solid $primary;
+//   padding: 0 10px;
+//   box-shadow: 4px 4px $primary;
+// }
 
-.box-shadow-secondary {
-  position: relative;
-  border: 2px solid #232323;
-  padding: 0 10px;
-  box-shadow: 4px 4px #232323;
+// .box-shadow-secondary {
+//   position: relative;
+//   border: 2px solid #232323;
+//   padding: 0 10px;
+//   box-shadow: 4px 4px #232323;
+// }
+
+body {
+  font-family: $regular-font;
 }
 
 /* ------------ Header Area -------------- */
 
 .header-navbar {
-  height: 60px;
-  line-height: 60px;
+  line-height: 40px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
-  background: $primary;
+  background: transparent;
   .container {
     display: flex;
     justify-content: space-between;
+    padding: 10px 20px;
     .header-logo img {
       height: 40px;
       width: 40px;
@@ -86,6 +99,7 @@ strong {
     }
     .nav-items {
       display: flex;
+      margin-bottom: 0;
       .nav-item {
         margin-right: 20px;
         a {
@@ -95,7 +109,7 @@ strong {
           font-weight: 700;
           letter-spacing: 1px;
           transition: color .2s ease;
-          color: $white;
+          color: $secondary;
         }
         &:last-child {
           margin-right: 0;
@@ -117,31 +131,35 @@ strong {
   }
 
   .banner-section {
-    min-height: 600px;
-    padding-bottom: 80px;
     position: relative;
     display: flex;
     z-index: 20;
+    min-height: 600px;
     .container {
-      max-width: 960px;
-      padding: 0 80px;
-      display: flex;
-      flex-direction: column;
+      padding: 120px 40px;
       text-align: center;
       margin: auto;
-      .title {
-        font-weight: 700;
-        font-size: 5rem;
-        padding-top: 50px;
-      }
-      .description {
-        font-size: 1.2rem;
-        letter-spacing: .3px;
-        line-height: 1.6;
-      }
-      .time {
-        font-weight: 500;
-        font-size: 1rem;
+      .left-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .title {
+          font-weight: 700;
+          font-size: 4rem;
+        }
+        .description {
+          font-size: 1.2rem;
+          padding: 10px;
+          margin: auto;
+          border: 1px solid red;
+          border-radius: 5px;
+        }
+        .time {
+          font-weight: 500;
+          font-size: 1rem;
+          margin-top: 20px;
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -151,7 +169,6 @@ strong {
     padding-top: 25vw;
     margin-top: -16vw;
     position: relative;
-    height: 200px;
     z-index: 1;
 
     &:before {
@@ -166,44 +183,62 @@ strong {
       transform-origin: top left;
       -webkit-transform: skewY(5deg);
       transform: skewY(5deg);
-      background: #fff;
+      background: $primary;
       box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, .3);
     }
   }
 
   .speakers-area {
-    background: #fff;
+    background: $primary;
     position: relative;
     z-index: 1;
     .container {
-      padding-bottom: 10px;
+      padding: 0 40px 40px;
+    }
+
+    .section-title {
+      color: $secondary;
+      border-color: $white;
+      text-align: left;
     }
 
     .speaker {
+      margin-top: 30px;
       .speaker-info {
-        border-radius: 5px;
-        width: 50%;
         margin: auto;
-        margin-top: 88px;
-        padding-bottom: 10px;
-        text-align: center;
+        img.first {
+          object-position: 50% 50%;
+          width: 90%;
+          height: 293px;
+        }
+        img.second {
+          width: 80%;
+          height: 360px;
+          object-position: 50% 50%;
+          margin-top: 60px;
+        }
+        img.third {
+          width: 80%;
+          height: 360px;
+          object-position: 50% 50%;
+          margin-top: 30px;
+        }
+        img.fourth {
+          object-position: 50% 50%;
+          width: 75%;
+          height: 260px;
+        }
 
-        img {
-          border-radius: 50%;
-          border: 2px solid #232323;
-          padding: 3px;
-          width: 50%;
-          margin: -66px 0 22px 0;
-          vertical-align: top;
+        h3 {
+          font-size: 1.5rem;
+          color: $white;
+          margin: 5px 0;
         }
 
         a {
           font-size: .9rem;
+          color: $white;
           margin-right: 10px;
-          &:hover {
-            color: $primary;
-            text-decoration: none;
-          }
           &:last-child {
             margin-right: 0;
           }
@@ -211,10 +246,9 @@ strong {
       }
       p {
         font-size: 1rem;
-        color: #666666;
+        color: $secondary;
         margin: 20px 0;
         padding: 0;
-        text-align: center;
       }
     }
 
@@ -240,13 +274,14 @@ strong {
   .sessions-area {
     position: relative;
     z-index: 98;
-    background: $primary;
+    background: $secondary;
 
     .container {
-      padding: 20px 0 80px;
+      padding: 40px;
     }
 
     .section-title {
+      color: $white;
       border-color: $white;
     }
 
@@ -345,6 +380,10 @@ strong {
     position: relative;
     z-index: 99;
     background: #fff;
+
+    .container {
+      padding: 40px 40px 20px;
+    }
     .sponsors {
       display: flex;
       justify-content: space-around;
@@ -352,8 +391,9 @@ strong {
       margin: 10px 0;
       padding-bottom: 30px;
       .sponsor {
-        width: 220px;
-        height: 92px;
+        width: 244px;
+        height: 263px;
+        border: 1px solid $secondary;
         margin-top: 40px;
         a {
           display: flex;
@@ -390,7 +430,9 @@ strong {
     position: relative;
     z-index: 102;
     background: $primary;
-    padding: 20px 0 100px;
+    .container {
+      padding: 40px;
+    }
     .section-title {
       border-color: $white;
     }
@@ -404,12 +446,66 @@ strong {
       height: calc(100vh - 52px); /* 100% of the viewport height - navbar height */
     }
   }
+
+  .organizers-area {
+    position: relative;
+    z-index: 99;
+    .container {
+      padding: 40px 40px 20px;
+    }
+    .organizers {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 10px 0;
+      padding-bottom: 30px;
+      .organizer {
+        width: 200px;
+        margin-top: 40px;
+        text-align: center;
+        .img-area {
+          width: 200px;
+          height: 200px;
+          margin-bottom: 10px;
+          img {
+            width: 100%;
+            height: 100%;
+            border: 1px solid $secondary;
+            border-radius: 50%;
+          }
+        }
+        .title:hover {
+          color: $secondary;
+        }
+        .description {
+          margin-top: 10px;
+        }
+      }
+    }
+    .curve-organizers-bottom {
+      position: relative;
+      height: 130px;
+      z-index: 1;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: $primary;
+        top: 0;
+        left: 0;
+        transform-origin: top right;
+        transform: skewY(-5deg);
+      }
+    }
+  }
 }
 
 .footer-area {
   position: relative;
   z-index: 9;
-  background: #fff;
+  background: $secondary;
   height: 100px;
   .container {
     display: flex;
@@ -418,7 +514,7 @@ strong {
     align-items: center;
     padding: 0 40px;
     .footer-logo {
-      color: $black;
+      color: $white;
       img {
         height: 40px;
         width: 40px;
@@ -455,17 +551,51 @@ strong {
 }
 
 /* ------------ For Responsiveness -------------- */
-@media (max-width: 1400px) {
-  .container {
-    max-width: 960px;
-    padding: 0 80px;
-  }
-}
-
 @media (max-width: 620px) {
+  .section-title {
+    width: 100%;
+    text-align: center;
+  }
   .body-area {
+    .speakers-area {
+      margin-top: -2px;
+    }
+    .speakers-area .container {
+      padding: 0 20px 10px;
+    }
+    .speakers-area .section-title {
+      text-align: center;
+    }
+    .speakers-area .speaker .speaker-info {
+      text-align: center;
+    }
+    .speakers-area .speaker .speaker-info img.first {
+      width: 75%;
+      height: 260px;
+      margin-top: 0px;
+    }
+    .speakers-area .speaker .speaker-info img.second {
+      width: 75%;
+      height: 260px;
+      margin-top: 0px;
+    }
+    .speakers-area .speaker .speaker-info img.third {
+      width: 75%;
+      height: 260px;
+      margin-top: 0px;
+    }
+    .speakers-area .speaker .speaker-info img.fourth {
+      width: 75%;
+      height: 260px;
+      margin-top: 0px;
+    }
     .speakers-area .curve-speaker-bottom {
       height: 60px;
+      margin-top: 0px;
+    }
+
+    .sessions-area .container {
+      padding: 0 20px 10px;
     }
     .sessions-area .fl-table td:last-child {
       border-left: 0;
@@ -511,22 +641,29 @@ strong {
       width: 200px;
       height: 100vh;
     }
+
+    .sponsors-area .container {
+      padding: 40px 20px;
+    }
+
+    .body-area .gallery-area .container {
+      padding: 40px 20px
+    }
   }
   .footer-area .container {
     padding: 10px;
   }
 }
 @media (max-width: 576px) {
+  .body-area .banner-section .container .left-area .title {
+    font-size: 3rem;
+  }
   .footer-area .container .nav-items .nav-item a {
     font-size: 1.5rem;
   }
 }
 
 @media (max-width: 500px) {
-  .container {
-    max-width: 100%;
-    padding: 0 10px;
-  }
   .body-area .speakers-area .speaker .speaker-info {
     width: 80%;
     img {

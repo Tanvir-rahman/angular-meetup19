@@ -75,7 +75,8 @@ export class AppComponent implements OnInit {
 
   public get images(): IMasonryGalleryImage[] {
     return this.urls.map(m => <IMasonryGalleryImage>{
-        imageUrl: m
+      imageUrl: m,
+      isFitWidth: true,
   })};
 
   toSpecificArea($event, name) {
@@ -83,14 +84,14 @@ export class AppComponent implements OnInit {
     document.getElementById(name).scrollIntoView({behavior: 'smooth'});
   }
 
-  // @HostListener('window:scroll', ['$event'])
-  // onWindowScroll(e) {
-  //    if (window.pageYOffset > 100) {
-  //      let element = document.getElementById('navbar');
-  //      element.classList.add('sticky');
-  //    } else {
-  //     let element = document.getElementById('navbar');
-  //       element.classList.remove('sticky');
-  //    }
-  // }
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(e) {
+     if (window.pageYOffset > 600) {
+       let element = document.getElementById('navbar');
+       element.classList.add('sticky');
+     } else {
+      let element = document.getElementById('navbar');
+        element.classList.remove('sticky');
+     }
+  }
 }
